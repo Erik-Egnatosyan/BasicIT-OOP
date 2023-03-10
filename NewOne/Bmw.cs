@@ -8,7 +8,6 @@ namespace NewOne
 {
     internal class Bmw:Car
     {
-        public long Id { get; set; }
         public Bmw():base()
         {
             color = "Yellow";
@@ -19,8 +18,7 @@ namespace NewOne
         }
         public Bmw(long id):base(id)
         {
-            Id = id;
-            Console.WriteLine(Id);
+            id = 1451451;
         }
     }
 }
