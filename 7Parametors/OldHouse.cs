@@ -22,7 +22,7 @@ namespace _7Parametors
         public OldHouse(byte IDhouse):base(IDhouse)
         {
             IDhouse = 100;
-            Console.WriteLine($"Your old house id is - > {IDhouse}");
+            Console.WriteLine($"Your old house id is -> {IDhouse}");
         }
     }
 }

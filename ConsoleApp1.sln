@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inheritance", "Inheritance\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewOne", "NewOne\NewOne.csproj", "{DBE22FAB-9770-49AB-A416-C3CD2D9E91E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7Parametors", "7Parametors\7Parametors.csproj", "{66236520-0322-4836-8B23-A35DCCA13DF8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "7Parametors", "7Parametors\7Parametors.csproj", "{66236520-0322-4836-8B23-A35DCCA13DF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningAllPrpertyAndTest", "LearningAllPrpertyAndTest\LearningAllPrpertyAndTest.csproj", "{A7635CDC-CEC4-4E47-B0D7-ABAFE8FE6F1A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{66236520-0322-4836-8B23-A35DCCA13DF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66236520-0322-4836-8B23-A35DCCA13DF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66236520-0322-4836-8B23-A35DCCA13DF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7635CDC-CEC4-4E47-B0D7-ABAFE8FE6F1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7635CDC-CEC4-4E47-B0D7-ABAFE8FE6F1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7635CDC-CEC4-4E47-B0D7-ABAFE8FE6F1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7635CDC-CEC4-4E47-B0D7-ABAFE8FE6F1A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
