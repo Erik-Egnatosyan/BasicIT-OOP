@@ -11,6 +11,10 @@
             Console.WriteLine(class1.d);
             Console.WriteLine(class1.e);
             Console.WriteLine(class1.f);
+#pragma warning disable CS0464 // Сравнение со значением NULL или типом структуры всегда вызывает false
+            bool bro = null >= 0;
+#pragma warning restore CS0464 // Сравнение со значением NULL или типом структуры всегда вызывает false
+            Console.WriteLine(bro);
         }
     }
 }

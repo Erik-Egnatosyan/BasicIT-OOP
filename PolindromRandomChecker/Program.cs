@@ -1,9 +1,13 @@
-﻿namespace PolindromRandomChecker
+﻿using System.Diagnostics;
+
+namespace PolindromRandomChecker
 {
     internal class Program
     {
         static void Main(string[] args)
         {
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
             string str = "Ароза упала на лапу Азора"; // Определяем строку для проверки на палиндром
             // Удаляем пробелы из строки и приводим все символы к нижнему регистру
             str = str.Replace(" ", "");
@@ -45,6 +49,8 @@
             else
                 // Иначе выводим сообщение о том, что строка не является палиндромом
                 Console.WriteLine("Ou...Sorry! Your text can't be Polindrom!");
+            double elapsedSeconds = stopwatch.Elapsed.TotalSeconds;
+            Console.WriteLine("Время выполнения: {0:F5} секунд", elapsedSeconds);
         }
     }
 }

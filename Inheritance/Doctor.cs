@@ -3,7 +3,9 @@
     internal class Doctor : HumanBase
     {
         public short y;
+#pragma warning disable CS0649 // Полю "Doctor.v" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию 0.
         public short v;
+#pragma warning restore CS0649 // Полю "Doctor.v" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию 0.
         public void Testmethod()
         {
             Name = "Elizaveta Vachaganovna";
