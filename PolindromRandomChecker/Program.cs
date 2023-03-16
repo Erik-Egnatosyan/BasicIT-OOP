@@ -8,7 +8,8 @@ namespace PolindromRandomChecker
         {
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
-            string str = "Ароза упала на лапу Азора"; // Определяем строку для проверки на палиндром
+            //avenacieeseesniaevac
+            string str = "avenacieeseesniaevac"; // Определяем строку для проверки на палиндром
             // Удаляем пробелы из строки и приводим все символы к нижнему регистру
             str = str.Replace(" ", "");
             str = str.ToLower();
