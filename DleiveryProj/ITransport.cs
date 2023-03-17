@@ -8,8 +8,8 @@ namespace DleiveryProj
 {
     internal interface ITransport : IDelivery
     {
-        public int MaxWeight { get; set; }
-        public int MinWeight { get; set; }
+        public int MaxWeight { get; }
+        public int MinWeight { get; }
         public Loaction LoactionDelivery { get; set; }
         public enum Loaction
         {

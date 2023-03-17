@@ -8,8 +8,8 @@ namespace DleiveryProj
 {
     internal class Truck : ITransport
     {
-        public int MaxWeight { get; set; } = 1100;
-        public int MinWeight { get; set; } = 0;
+        public int MaxWeight { get; } = 1100;
+        public int MinWeight { get; } = 0;
         public ITransport.Loaction LoactionDelivery { get; set; } = ITransport.Loaction.Georgia;
 
         public int ShipTime { get; set; } = 3;
@@ -24,11 +24,13 @@ namespace DleiveryProj
             UserInterface user = new UserInterface();
             Console.WriteLine($"Shiptime is {ShipTime} month\nShip cost is {ShipCost}$ and your sale is {Sale}%");
             Console.WriteLine("Do you want to buy? YES or NO");
+#pragma warning disable CS8600 // Преобразование литерала, допускающего значение NULL или возможного значения NULL в тип, не допускающий значение NULL.
             string checkInputYesOrNO = Console.ReadLine();
-            if (checkInputYesOrNO == "YES" && user.money >= ShipCost)
-            {
+#pragma warning restore CS8600 // Преобразование литерала, допускающего значение NULL или возможного значения NULL в тип, не допускающий значение NULL.
+            if (checkInputYesOrNO == UserInterface.YES && user.money >= ShipCost)
                 Console.WriteLine($"Congratulation!!! You buy your item. Now get your track ID -> {TrackId}.\nThere is your StartDate ->{StartDate} and EndDate ->{EndDate}");
-            }
+            else if (checkInputYesOrNO == UserInterface.NO)
+                Console.WriteLine("Okay. I cancel your item!");
             else
                 Console.WriteLine("Sorry you cant do that :(");
         }

@@ -8,6 +8,8 @@ namespace DleiveryProj
 {
     internal class UserInterface
     {
+        public const string YES = "YES";
+        public const string NO = "NO";
         public int money { get; set; } = 5000;
         public void userInterface()
         {
@@ -16,50 +18,74 @@ namespace DleiveryProj
             Truck truck = new Truck();
             Console.WriteLine("Pls add your item weight!");
             int weight = Convert.ToInt32(Console.ReadLine());
-            if (weight <= truck.MaxWeight && weight >= ship.MinWeight && weight >= airPlane.MinWeight) 
+            if (weight < 0)
+            {
+                Console.WriteLine("Invalid input");
+                System.Environment.Exit(0);
+            }  
+            if (weight <= truck.MaxWeight && weight >= ship.MinWeight && weight >= airPlane.MinWeight)
             {
                 Console.WriteLine("You can use 1)Truck 2)Airplane 3)Ship!\nWhich one you want use?");
                 int numberCheck = Convert.ToInt32(Console.ReadLine());
-                if (numberCheck == 1)
-                    truck.Checker();
-                else if (numberCheck == 2)
-                    airPlane.Checker();
-                else if(numberCheck == 3)
-                    ship.Checker();
-                else
-                    Console.WriteLine("Sorry i dont understand :(");
+                switch (numberCheck)
+                {
+                    case 1:
+                        truck.Checker();
+                        break;
+                    case 2:
+                        airPlane.Checker();
+                        break;
+                    case 3:
+                        ship.Checker();
+                        break;
+                    default:
+                        Console.WriteLine("Sorry i dont understand :(");
+                        break;
+                }
             }
-            else if(weight <= airPlane.MinWeight)
+            else if (weight <= airPlane.MinWeight)
             {
                 Console.WriteLine("You can use Truck");
                 truck.Checker();
             }
-            else if(weight <= ship.MinWeight)
+            else if (weight <= ship.MinWeight)
             {
                 Console.WriteLine("You can use 1)Truck or 2)Airplane\nWhich one you want use?");
                 int numberCheck = Convert.ToInt32(Console.ReadLine());
-                if (numberCheck == 1)
-                    truck.Checker();
-                else if (numberCheck == 2)
-                    airPlane.Checker();
-                else
-                    Console.WriteLine("Sorry i dont understand :(");
+                switch (numberCheck)
+                {
+                    case 1:
+                        truck.Checker();
+                        break;
+                    case 2:
+                        airPlane.Checker();
+                        break;
+                    default:
+                        Console.WriteLine("Sorry i dont understand :(");
+                        break;
+                }
             }
             else if (weight >= airPlane.MinWeight && weight <= airPlane.MaxWeight)
             {
                 Console.WriteLine("You can use 1)Airplane or 2)Ship\nWhich one you want use?");
                 int numberCheck = Convert.ToInt32(Console.ReadLine());
-                if (numberCheck == 1)
-                    airPlane.Checker();
-                else if (numberCheck == 2)
-                    ship.Checker();
-                else
-                    Console.WriteLine("Sorry i dont understand :(");
+                switch (numberCheck)
+                {
+                    case 1:
+                        airPlane.Checker();
+                        break;
+                    case 2:
+                        ship.Checker();
+                        break;
+                    default:
+                        Console.WriteLine("Sorry i dont understand :(");
+                        break;
+                }
             }
-            else if(weight >= ship.MinWeight && weight <= ship.MaxWeight)
+            else if (weight >= ship.MinWeight && weight <= ship.MaxWeight)
             {
-                Console.WriteLine("You can use Ship");
-                ship.Checker();
+                Console.WriteLine("You can use Airplane or Ship");
+                airPlane.Checker();
             }
         }
     }
