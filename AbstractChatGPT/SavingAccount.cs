@@ -6,28 +6,35 @@ using System.Threading.Tasks;
 
 namespace AbstractChatGPT
 {
-    internal class SavingAccount : BankAccount
+    public class SavingsAccount : BankAccount
     {
-        public decimal saveMoneyBank { get; set; } = 0;
+        public decimal InterestRate { get; }
+
+        public SavingsAccount(decimal balance, string accountNumber, decimal interestRate) : base(balance, accountNumber)
+        {
+            InterestRate = interestRate;
+        }
+
+        public override void Deposit(decimal amount)
+        {
+            Balance += amount;
+        }
+
+        public override void Withdraw(decimal amount)
+        {
+            if (Balance >= amount)
+            {
+                Balance -= amount;
+            }
+            else
+            {
+                Console.WriteLine("Insufficient funds.");
+            }
+        }
+
         public override decimal CalculateInterest()
         {
-            Console.WriteLine($"You save {saveMoneyBank}$. Do you want save more or cash out?\n1)Save\n2)Cash out");
-            int numberCheck = Convert.ToInt32(Console.ReadLine());
-            if (numberCheck == 1)
-            {
-                Console.WriteLine("How much?");
-                decimal moneyAdd = Convert.ToInt32(Console.ReadLine());
-                if (moneyAdd < Balance)
-                {
-                    Balance -= moneyAdd;
-                    saveMoneyBank = moneyAdd;
-                }
-                else if (moneyAdd > Balance)
-                {
-                    Console.WriteLine($"You cant save {moneyAdd} money, because you don't have");
-                }
-            }
-            return saveMoneyBank;
+            return Balance * InterestRate;
         }
     }
 }

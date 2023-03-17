@@ -6,12 +6,32 @@ using System.Threading.Tasks;
 
 namespace AbstractChatGPT
 {
-    internal class CheckingAccount : BankAccount
+    public class CheckingAccount : BankAccount
     {
-        SavingAccount savingAccount = new SavingAccount();
+        public CheckingAccount(decimal balance, string accountNumber) : base(balance, accountNumber)
+        {
+        }
+
+        public override void Deposit(decimal amount)
+        {
+            Balance += amount;
+        }
+
+        public override void Withdraw(decimal amount)
+        {
+            if (Balance >= amount)
+            {
+                Balance -= amount;
+            }
+            else
+            {
+                Console.WriteLine("Insufficient funds.");
+            }
+        }
+
         public override decimal CalculateInterest()
         {
-            return Balance - savingAccount.saveMoneyBank;
+            return Balance * 0.01m;
         }
     }
 }
