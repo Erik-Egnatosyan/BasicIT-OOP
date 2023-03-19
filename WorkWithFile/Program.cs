@@ -6,7 +6,9 @@ namespace WorkWithFile
     {
         static void Main(string[] args)
         {
-            string filePath = @"C:\Users\Erik\Desktop\example.txt";
+            //C:\Users\Eriksson\Desktop\example.json
+            //C:\Users\Erik\Desktop\example.json
+            string filePath = @"C:\Users\Eriksson\Desktop\example.json";
             if (File.Exists(filePath))
             {
                 string content = File.ReadAllText(filePath);
