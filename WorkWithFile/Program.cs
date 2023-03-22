@@ -8,7 +8,7 @@ namespace WorkWithFile
         {
             //C:\Users\Eriksson\Desktop\example.json
             //C:\Users\Erik\Desktop\example.json
-            string filePath = @"C:\Users\Eriksson\Desktop\example.json";
+            string filePath = @"C:\Users\Erik\Desktop\example.json";
             if (File.Exists(filePath))
             {
                 string content = File.ReadAllText(filePath);
@@ -19,7 +19,7 @@ namespace WorkWithFile
                 File.Create(filePath).Dispose();
                 Console.WriteLine("You dont have it. I created for you");
             }
-            string json = "{\"name\":\"John\", \"age\":30, \"car\":Bmw}";
+            string json = @"{ 'Name': 'Bad Boys', 'ReleaseDate': '1995-4-7T00:00:00'}";
             File.WriteAllText(filePath, json + Environment.NewLine);
             Console.WriteLine("Do you want to see 1)Pretty version or 2)Original?");
             int inputOneOrTwo = Convert.ToInt32(Console.ReadLine());
