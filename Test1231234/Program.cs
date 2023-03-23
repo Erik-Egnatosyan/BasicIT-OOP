@@ -7,18 +7,17 @@ namespace Test1231234
     {
         static void Main(string[] args)
         {
-            string str = "D1rt9";
-            str = string.Join(" ", str.ToCharArray());
-            for (int i = 0; i < str.Length; i++)
+            string input = "TOmorrow    cOMes              TodAY";
+            string output = "";
+            for (int i = 0; i < input.Length; i++)
             {
-                if (!(Char.IsLetter(str[i])) && str[i] != ' ')
+                output += input[i];
+                if (i != input.Length - 1 && char.IsLetter(input[i]) && char.IsLetter(input[i + 1]))
                 {
-                    str = str.Remove(i - 1, 1);
+                    output += " ";
                 }
-               else if (!(Char.IsLetter(str[i])) && Char.IsLetter(str[i + 1]) && i != str.Length)
-                    str = str.Remove(i, 1);
             }
-            Console.WriteLine("This is str\n" + str);
+            Console.WriteLine(output);
         }
     }
 }
