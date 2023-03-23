@@ -59,5 +59,9 @@ namespace FilmBoom
             DisplayActors(Actors.Саймон_Пегг);
             Price = 4500;
         }
+        public void Changeable()
+        {
+            Console.WriteLine($"The movie name is {Name}.\nThe genre is {Genre}.\nMain actor is {DisplayActors}.\nThe category of movie is {Category}.\nDescription: {Description};\nThe rating is {StarCount}.\nWatch count is {WatchCount} and film date is {FilmDate}.\nPrice is {Price}$");
+        }
     }
 }

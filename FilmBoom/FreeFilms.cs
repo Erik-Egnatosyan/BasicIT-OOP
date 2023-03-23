@@ -15,6 +15,7 @@ namespace FilmBoom
         public float StarCount { get; set; }
         public int WatchCount { get; set; }
         public DateTime FilmDate { get; set; }
+
         public void DisplayActors(Actors actors)
         {
 
@@ -30,6 +31,10 @@ namespace FilmBoom
             FilmDate = new DateTime(2018, 11, 16);
             DisplayActors(Actors.Вигго_Мортенсен);
             DisplayActors(Actors.Махершала_Али);
+        }
+        public void Changeable()
+        {
+            Console.WriteLine($"The movie name is {Name}.\nThe genre is {Genre}.\nMain actor is {DisplayActors}.\nThe category of movie is {Category}.\nDescription: {Description};\nThe rating is {StarCount}.\nWatch count is {WatchCount} and film date is {FilmDate}.");
         }
     }
 }

@@ -16,6 +16,7 @@ namespace FilmBoom
         int WatchCount { get; set; }
         DateTime FilmDate { get; set; }
         void DisplayActors(Actors actors);
+        void Changeable();
     }
     public enum Actors
     {
