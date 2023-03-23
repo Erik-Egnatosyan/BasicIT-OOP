@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,9 +30,6 @@ namespace FilmBoom
             StarCount = 4.5f;
             WatchCount = 150000;
             FilmDate = new DateTime(2022, 05, 27);
-            DisplayActors(Actors.Том_Круз);
-            DisplayActors(Actors.Майлз_Теллер);
-            Price = 2500;
         }
         public void Agent_007()
         {
@@ -42,9 +40,6 @@ namespace FilmBoom
             StarCount = 4.6f;
             WatchCount = 200000;
             FilmDate = new DateTime(2022, 09, 30);
-            DisplayActors(Actors.Дэниел_Крейг);
-            DisplayActors(Actors.Рами_Малек);
-            Price = 3000;
         }
         public void Mission_Impossible()
         {
@@ -55,9 +50,16 @@ namespace FilmBoom
             StarCount = 4.8f;
             WatchCount = 250000;
             FilmDate = new DateTime(2022, 11, 04);
-            DisplayActors(Actors.Том_Круз);
-            DisplayActors(Actors.Саймон_Пегг);
-            Price = 4500;
+        }
+        public void GreenBook()
+        {
+            Name = "Green Book";
+            Genre = "Drama";
+            Category = "Movie";
+            Description = "A working-class Italian-American bouncer becomes the driver of an African-American classical pianist on a tour of venues through the 1960s American South.";
+            StarCount = 4.8f;
+            WatchCount = 100000;
+            FilmDate = new DateTime(2018, 11, 16);
         }
         public void Changeable()
         {
