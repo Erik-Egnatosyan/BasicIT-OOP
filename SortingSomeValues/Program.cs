@@ -48,6 +48,7 @@
 
             int[] array = values.ToArray();
             Array.Sort(array);
+            values.Clear();
             foreach (var item in array)
             {
                 Console.WriteLine(item);
