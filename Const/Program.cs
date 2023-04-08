@@ -4,16 +4,10 @@
     {
         const int daysInWeek = 7;
         const string greeting = "Hello, World!";
-        readonly int number = 5;
-        public static void Method1(int number)
-        {
-            Console.WriteLine(number);
-        }
         static void Main(string[] args)
         {
-            Method1(25);
+            Console.WriteLine(daysInWeek);
         }
-
         //Свойства у const следующие:
         //1)Нельзя изменять значение переменной после её объявления и инициализации.
         //2)Переменная доступна только для чтения.
