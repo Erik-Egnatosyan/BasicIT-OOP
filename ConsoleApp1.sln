@@ -69,13 +69,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MutableAndimutable", "Mutab
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Const", "Const\Const.csproj", "{92CF1D56-3C80-4AE8-9929-8C560E09E1AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abstract", "Abstract\Abstract.csproj", "{B4A8B85D-1112-4FDA-8BA8-674750020C8F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Abstract", "Abstract\Abstract.csproj", "{B4A8B85D-1112-4FDA-8BA8-674750020C8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polymorphism", "Polymorphism\Polymorphism.csproj", "{608AED72-8278-4C2E-8CFA-787696217F0D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Polymorphism", "Polymorphism\Polymorphism.csproj", "{608AED72-8278-4C2E-8CFA-787696217F0D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceExample", "InterfaceExample\InterfaceExample.csproj", "{DE85E17A-E14F-4FDA-BF7C-9874D186BF8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterfaceExample", "InterfaceExample\InterfaceExample.csproj", "{DE85E17A-E14F-4FDA-BF7C-9874D186BF8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceExercise", "InterfaceExercise\InterfaceExercise.csproj", "{6205953E-A64B-4813-8A6E-AB5A0E093683}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterfaceExercise", "InterfaceExercise\InterfaceExercise.csproj", "{6205953E-A64B-4813-8A6E-AB5A0E093683}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VirtualExample", "VirtualExample\VirtualExample.csproj", "{BF759AF3-E33E-40C6-B1E9-01CB39DF41E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericsExample", "GenericsExample\GenericsExample.csproj", "{0A7C8E3B-5A85-455A-B07B-0FCFB329AD79}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -207,6 +211,14 @@ Global
 		{6205953E-A64B-4813-8A6E-AB5A0E093683}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6205953E-A64B-4813-8A6E-AB5A0E093683}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6205953E-A64B-4813-8A6E-AB5A0E093683}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF759AF3-E33E-40C6-B1E9-01CB39DF41E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF759AF3-E33E-40C6-B1E9-01CB39DF41E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF759AF3-E33E-40C6-B1E9-01CB39DF41E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF759AF3-E33E-40C6-B1E9-01CB39DF41E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A7C8E3B-5A85-455A-B07B-0FCFB329AD79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A7C8E3B-5A85-455A-B07B-0FCFB329AD79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A7C8E3B-5A85-455A-B07B-0FCFB329AD79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A7C8E3B-5A85-455A-B07B-0FCFB329AD79}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -231,6 +243,8 @@ Global
 		{608AED72-8278-4C2E-8CFA-787696217F0D} = {3B2784A4-A9BE-4765-AAA2-0D565B942632}
 		{DE85E17A-E14F-4FDA-BF7C-9874D186BF8D} = {3B2784A4-A9BE-4765-AAA2-0D565B942632}
 		{6205953E-A64B-4813-8A6E-AB5A0E093683} = {3B2784A4-A9BE-4765-AAA2-0D565B942632}
+		{BF759AF3-E33E-40C6-B1E9-01CB39DF41E1} = {3B2784A4-A9BE-4765-AAA2-0D565B942632}
+		{0A7C8E3B-5A85-455A-B07B-0FCFB329AD79} = {3B2784A4-A9BE-4765-AAA2-0D565B942632}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A890DB90-93EA-4487-9398-ECD4A62769C6}
