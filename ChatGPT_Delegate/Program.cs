@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
             Calculator calculator = new Calculator();
-            double result = calculator.Calculate(2, 3, calculator.Plus);
+            double result = calculator.Calculate(2, 3, calculator.Multiply);
             Console.WriteLine(result); 
         }
     }
