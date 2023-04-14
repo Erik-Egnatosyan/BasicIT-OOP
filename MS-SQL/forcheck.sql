@@ -155,3 +155,61 @@ insert employee values
 SELECT e.empid, e.ename, e.salary, d.dname
 FROM employee e
 INNER JOIN department d ON e.deptno = d.deptno;
+---------------------------------------------------
+create procedure emplMoney
+as
+begin
+	select SUM(salary) as total_salary from employee;	
+end
+
+exec emplMoney
+---------------------------------------------------
+create procedure orderCount
+as
+begin
+	select COUNT(CustomerId) as total_count from Orders where CustomerId = 1
+end
+
+exec orderCount
+---------------------------------------------------
+CREATE FUNCTION countTwoSalary()
+RETURNS MONEY
+AS
+BEGIN
+    DECLARE @totalSalary MONEY;
+    SET @totalSalary = 
+	(SELECT SUM(salary) FROM employee) 
+	+
+	(SELECT SUM(salary) FROM emplyees);
+    RETURN @totalSalary;
+END;
+
+drop function countTwoSalary
+SELECT dbo.countTwoSalary();
+---------------------------------------------
+create function SumTwoNumber(@num1 int, @num2 int)
+returns int
+as
+begin
+	declare @sumoftwonumber int;
+	set @sumoftwonumber = @num1 + @num2;
+	return @sumoftwonumber;
+end
+
+select dbo.SumTwoNumber(15,15)
+---------------------------------------------------
+create view DataView
+as select createdAt 
+from Orders
+
+select * from DataView
+---------------------------------------------------
+create view UserNameView
+as select UserName 
+from emplyees
+
+select UserName from emplyees
+where UserName like '%n'
+
+select * from UserNameView
+where UserName like '%n'
